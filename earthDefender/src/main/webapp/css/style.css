@@ -1,0 +1,255 @@
+/* 초기화
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+/*    background:transparent; */
+}
+
+body {
+    line-height:1;
+    font-family: 'Noto Sans KR', sans-serif;;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/********** 초기화 코드 끝 **********/
+
+
+
+/********** 구글 아이콘 **********/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+
+/********** header **********/
+#header { 
+    padding-bottom: 70px;
+    max-width: 1454px;
+    height: 130px; 
+    margin: 0 auto; 
+    position: relative; /* position: absolute의 기준이 되어 주려고 ex toggle버튼은 header를 기준으로 오른쪽으로 20px(right:20px) 떨어져 있고, 위로 30px(top:30px) 떨어진 위치에 position:absolute로 위에 있다  */
+}
+#header hr { max-width: 1454px; }
+#header .logo { float: left; padding-top: 82px; display: inline-block; } /* .logo가 어디 있는지 작업자가 알 수 있다 */
+#header .gnb { padding: 50px 0; }
+#header .login_logout { padding-top: 40px; font-size: 0.9em; }
+#header .gnb li { display: inline-block; color: #777; }
+#header .gnb li a { text-decoration: none; display: block; color: #777;  } /* a링크를 블럭으로 잡아서 글씨 근처에 마우스 오버 가능  */
+#header .gnb li a:hover { color: #296c82; }
+/* .menu-toggle-btn { position: absolute; right: 20px; top: 30px; cursor: pointer; } */
+
+
+/********** main **********/
+.logo_hr {
+    display: block;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    width: 587px;
+    top: 130px;
+    float: left;
+}
+.m_btn {
+    display: block;
+    width: 90px;
+    height: 225px;
+    position: absolute;
+    right: -40px;
+    top: 25%;
+    margin-top: -110px;
+    z-index: 1;
+    transition: opacity 400ms;
+}
+
+.slider { 
+    text-align: center; 
+    width: 100%; 
+    float: left;
+}
+.slider div img { width: 100%; }
+.bx-wrapper { position: relative; }
+.bx-controls-direction { font-size: 100px;}
+.bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100px;
+    height: 110px;
+    overflow: hidden;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-weight: normal;
+}
+/* 아이콘만 나오고 글씨는 안나오게 */
+.bx-controls-direction .bx-prev { left: 0; }
+.bx-controls-direction .bx-next { right: 0; }
+.bx-controls-direction .bx-prev:before { content: "\e93d"; font-family: 'xeicon'; }
+.bx-controls-direction .bx-next:before { content: "\e940"; font-family: 'xeicon'; }
+/* 구글 아이콘
+.bx-controls-direction .bx-next:before { content: "\f1df"; font-family: 'Material Icons'; } */
+
+.bx-controls-direction a { text-decoration: none; }
+
+.bx-pager {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.bx-pager div { display: inline-block; padding: 5px; }
+.bx-pager div a {
+    display: block;
+    font-size: 0;
+    color: transparent;
+    width: 24px;
+    height: 3px;
+    background: #999;
+}
+.bx-pager div a.active { background: #fff; }
+.controls { text-align: center; padding: 50px 0 0; }
+.controls button { background: transparent; border: hidden; cursor: pointer; }
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 200,
+'GRAD' 0,
+'opsz' 48
+}
+
+
+.sub_title { text-align: center; padding-top: 40px; }
+.sub_title h2 { font-size: 1.5em; } 
+
+
+/********** footer **********/
+footer { 
+    max-width: 1454px;
+    height: 70px;
+    width: 100%;  
+    margin: 10px auto;
+    color: #777;
+    font-size: 0.8em; 
+}
+footer .foot { 
+    padding: 20px;
+}
+footer .copyright { float: left; padding-top: 13px; padding-left: 5px; }
+footer .conection { float: right; padding: 5px; }
+
+
+/********** 반응형 **********/
+@media all and (min-width:768px) {
+    .menu-toggle-btn { display: none; }
+}
+
+@media all and (max-width:1000px) {
+    #header .logo img { width: 70%; }
+}
+
+@media all and (min-width:1024px) {
+    #header .gnb { float: right; }
+    #header .gnb li { 
+        display: inline-block; 
+        padding-left: 50px;
+    }
+}

@@ -19,6 +19,11 @@
 <!-- 공통 Style -->
 <link href="/asset/LYTTMP_0000000000000/style.css" rel="stylesheet" />
 
+<style>
+	/* sub background */
+	#main_bg { background: url("/images/back_sub.png") center top no-repeat; background-size: cover; position: relative; }
+</style>
+
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- jquery 항상 최신버전 사용하기 -->
 <script src="https://cdn.tiny.cloud/1/f4jgwu1ymxy0ednvwrd1af0ozo4kbyfl3r1kc3n0rkap3ak1/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
@@ -96,10 +101,9 @@ $(function(){
     });
 });
 </script>
-
 </head>
 
-<body> 
+<body id="main_bg"> 
 <%-- method : select, update, delete도 있다? / 속도는 get이 더 빨라. 보안 / 개발시 get으로 url확인(유지보수) / 
 	게시판은 post를 주로 사용(1.edit기능을 사용하기 때문에 get을 쓰면 파라미터 길이제한, 2.첨부파일은 get으로 보낼 수 없어) /
 	action=url: 주소로 내용을 전송 / name값이 tempVO의 값과 일치해야 값이 담김  --%>
@@ -111,6 +115,7 @@ $(function(){
 	<button type="submit">등록</button>
 </form>	 --%>
 
+<%@ include file="/WEB-INF/jsp/cmm/Header.jsp" %>
 
 <!-- actionUrl 정의  / 아이디 있을 시 수정 없을 시 등록-->
 <c:choose>
@@ -127,7 +132,7 @@ $(function(){
 	<form action="${actionUrl}" method="post" id="frm" name="frm" onsubmit="return regist()" enctype="multipart/form-data"> <!-- onsubmit 태그에 대한 유효성검사(정상이면 returntrue) 시 사용 (필수값에 사용. 미작성시 경고창 뜨거나 미작성 한 곳으로 커서를 보내는 스크립트 사용 가능) -->
 		<input type="hidden" name="boardId" value="${result.boardId}" />
 		
-		<input type="hidden" name="returnUrl" value="/notice/boardRegist.do" /> <!-- 220622 파일 삭제 시 해당 페이지로 다시 오게 한다 -->
+		<input type="hidden" name="returnUrl" value="/notice/noticeRegist.do" /> <!-- 파일 삭제 시 해당 페이지로 다시 오게 한다 -->
 		
 		<table class="chart2">
 			<caption>게시글 작성_이 표는 제목 내용 조회수 날짜로 구성되어있습니다</caption> <!-- 표의 제목과 설명 / 웹접근성을 위해 필수 -->
@@ -149,7 +154,7 @@ $(function(){
 					<label for="signAtY">예 : </label> <!-- checkbox는 여러개 선택이라 java에서 array로 받고, radio는 택1 -->
 					<input type="radio" id="signAtY" value="Y" name="signAt" <c:if test="${result.signAt eq 'Y'}">checked="checked"</c:if> /> <!-- checked="checked" 체크 되어 있는 상태 -->
 					&nbsp;&nbsp;&nbsp; 
-					<label for="noticeAtN">아니오 : </label>
+					<label for="signAtN">아니오 : </label>
 					<input type="radio" id="signAtN" value="N" name="signAt" <c:if test="${result.signAt ne 'Y'}">checked="checked"</c:if> /> <!-- result.noticeAt ne 'Y'/ Y가 아닐 때 default값(checked)으로 해주려고 (if문) -->
 				</td>
 			</tr>

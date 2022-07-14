@@ -18,10 +18,18 @@
 <link href="/asset/BBSTMP_0000000000001/style.css" rel="stylesheet" />
 <!-- 공통 Style -->
 <link href="/asset/LYTTMP_0000000000000/style.css" rel="stylesheet" />
+
+<style>
+	/* sub background */
+	#main_bg { background: url("/images/back_sub.png") center top no-repeat; background-size: cover; position: relative; }
+</style>
+
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- jquery 항상 최신버전 사용하기 -->
 </head>
 
-<body> 
+<body id="main_bg"> 
+
+<%@ include file="/WEB-INF/jsp/cmm/Header.jsp" %>
 
 <%-- 기본 URL --%>
 <c:url var="_BASE_PARAM" value="">
@@ -73,7 +81,7 @@
 			<div class="btn-cont ar">
 				<c:choose>
 					<c:when test="${not empty searchVO.boardId}">
-						<c:url var="uptUrl" value="/notice/boardRegist.do${_BASE_PARAM}">
+						<c:url var="uptUrl" value="/notice/noticeRegist.do${_BASE_PARAM}">
 							<c:param name="boardId" value="${result.boardId}" />
 						</c:url>
 						<a href="${uptUrl}" class="btn">수정</a>

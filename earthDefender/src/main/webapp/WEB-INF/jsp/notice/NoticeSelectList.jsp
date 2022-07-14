@@ -32,17 +32,23 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- jquery 항상 최신버전 사용하기 -->
 
 <style>
-	#main_bg { background: url("images/back_sub.png") center top no-repeat; background-size: cover; position: relative; }
+	/* sub background */
+	#main_bg { background: url("/images/back_sub.png") center top no-repeat; background-size: cover; position: relative; }
 </style>
     
 </head>
 
 <body id="main_bg"> 
 
+<%@ include file="/WEB-INF/jsp/cmm/Header.jsp" %>
+
 <div class="container" >
+
+	<div class="sub_title"><h2>지구방위대소식</h2></div>
+
 	<div id="contents" >
 	
-		<%-- 검색영역 --%>
+		<%-- 검색영역 
 		<div id="bbs_search" >
 			<form name="frm" method="post" action="/notice/selectList.do">
 				<fieldset>
@@ -61,12 +67,31 @@
 					</span>
 				</fieldset>
 			</form>
-		</div>
+		</div> --%>
 		
 		<%-- 목록 영역 --%>
 		<div id="bbs_wrap">
-			<div class="total">
+			<div class="total" style="float: left;">
 				총 게시물 <strong><c:out value="${paginationInfo.totalRecordCount}" /></strong>건 | 현재페이지 <strong><c:out value="${paginationInfo.currentPageNo}" /></strong>/ <c:out value="${paginationInfo.totalPageCount}" />
+			</div>
+			<div style="float: right; padding-bottom: 2em;">
+			<form name="frm" method="post" action="/notice/selectList.do">
+				<fieldset>
+					<legend>검색조건입력폼</legend>
+					<label for="ftext" class="hdn">검색분류선택</label>
+					<select name="searchCondition" id="ftext">
+						<option value="0" <c:if test="${searchVO.searchCondition eq '0'}">selected="selected"</c:if>> 제목 </option>
+						<option value="1" <c:if test="${searchVO.searchCondition eq '1'}">selected="selected"</c:if>> 내용 </option>
+						<option value="2" <c:if test="${searchVO.searchCondition eq '2'}">selected="selected"</c:if>> 작성자 </option>
+					</select>
+					
+					<label for="inp_text" class="hdn">검색어입력</label>
+					<input name="searchKeyword" value="<c:out value="${searchVO.searchKeyword}" />" type="text" class="inp_s" id="inp_text" />
+					<span class="bbtn_s">
+						<input type="submit" value="검색" title="검색(수업용 게시판 게시물 내)" />
+					</span>
+				</fieldset>
+			</form>
 			</div>
 			<div class="bss_list">
 				<table class="list_table">
@@ -81,7 +106,7 @@
 					</thead>
 					<tbody>
 						<%-- 공지 글 --%>
-						<c:forEach var="result" items="${noticeResultList}" varStatus="status">
+						<c:forEach var="result" items="${signResultList}" varStatus="status">
 							<tr class="notice">
 								<td class="num"><span class="label-bbs spot">공지</span></td>
 								<td class="tit">
@@ -172,11 +197,44 @@
 	</div>
 </div>
 
-<script> /* forward 시 액션에 맞는 프로세서가 정상적으로 종료 시 메세지(등록되었습니다. 삭제되었습니다 등)를 보내주는 역할 */
+<!-- <script> /* forward 시 액션에 맞는 프로세서가 정상적으로 종료 시 메세지(등록되었습니다. 삭제되었습니다 등)를 보내주는 역할 */
 <c:if test="${not empty message}">
 	alert("${message}");
 </c:if>	
-</script>
+      
+      
+////////// 로그인 //////////
+$(document).ready(function(){
+	//로그인
+	$(".login").click(function(){
+		$(".dim, .layer-login").fadeIn();
+		return false;
+	});
+	
+	//레이어닫기
+	$(".layer-close").click(function(){
+		$(".dim, .layer-login").fadeOut();
+		return false;
+	});
+});
 
+function vali() {
+	if(!$("#loginId").val()) {
+		alert("아이디를 입력해주세요.");
+		$("#loginId").focus();
+		return false;
+	}
+	
+	if(!$("#loginPw").val()) {
+		alert("비밀번호를 입력해주세요.");
+		$("loginPw").focus();
+		return false;
+	}
+}
+
+<c:if test="${not empty loginMessage}">
+	alert("${loginMessage}");
+</c:if> -->
+</script>
 </body>
 </html>

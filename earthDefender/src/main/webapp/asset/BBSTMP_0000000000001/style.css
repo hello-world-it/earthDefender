@@ -68,7 +68,7 @@ div ~ #bbs_wrap { margin-top:30px; }
 #bbs_wrap .list_table tbody td.work { text-align:left;padding-left:10px; }
 #bbs_wrap .list_table .file a { display:inline-block;vertical-align:middle; width:25px; height:25px; }
 #bbs_wrap .list_table .file img { display:block; max-width:100%; margin:0 auto; }
-#bbs_wrap .list_table .notice { background:#F3F7FF; }
+#bbs_wrap .list_table .notice { background-color:rgba(243,247,255,0.5); }
 #bbs_wrap .list_table .notice .class { font-weight:bold;color:#5978AF; }
 #bbs_wrap .list_table .deleted td, 
 #bbs_wrap .list_table .deleted td a { color:#bfbfbf;text-decoration:line-through; }
@@ -240,7 +240,7 @@ table.file_list_chart tbody td.del { text-align:center;width:50px; }
 
 /* label */
 .label-bbs { display:inline-block;height:20px;line-height:20px;background:#aaa;color:#fff;font-size:11px;font-family:Daum;padding:0 5px; }
-.label-bbs.spot { background:#c000c0; }
+.label-bbs.spot { background:#facbbb; }
 .label-bbs.spot2 { background:#ff9f00; }
 
 .comtneduprgVO .txt { width:100%; }
@@ -250,7 +250,7 @@ table.file_list_chart tbody td.del { text-align:center;width:50px; }
 @media all and (max-width: 320px) { 
 	/* 검색처리 */
 	#bbs_mbl #bbs_search #ctgry1 { visibility:hidden;position:absolute; }
-	#bbs_mbl #ftext { visibility:hidden;position:absolute; }	
+	#bbs_mbl #ftext { visibility:hidden;position:absolute; width: 200px; }	
  }
  
 /* board button */
