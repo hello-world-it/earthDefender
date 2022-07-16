@@ -3,7 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 <title>header</title>
 
 <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -35,9 +38,9 @@
 			<nav class="gnb">
 				<ul>
 					<li><a href="/search.do">주변쓰레기통찾기</a></li>
-					<li><a href="#">지구방위대활동사진</a></li>
+					<li><a href="/photo.do">지구방위대활동사진</a></li>
 					<li><a href="/notice/selectList.do">지구방위대소식</a></li>
-					<li><a href="#">자주묻는질문</a></li>
+					<li><a href="/faq.do">자주묻는질문</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -52,8 +55,8 @@
 	<!-- 로그인 -->
 	<div class="layer-popup layer-login" style="display: none;">
 		<header class="layer-header">
-			<span class="logo"> 
-				<span class="img-logo">한국폴리텍대학대전캠퍼스 스마트소프트웨어학과</span>
+			<span class="logo_login"> 
+				<span class="img-logo">earth defender 지구방위대</span>
 			</span>
 			<button type="button" class="layer-close">
 				<span>팝업 닫기</span>
@@ -83,7 +86,7 @@
 
 </header>
 
-<hr />
+<hr style="width: 100%; max-width:1200px;">
 	
 <script>
 <c:if test="${not empty message}">

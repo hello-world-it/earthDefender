@@ -112,7 +112,7 @@ select {
 	border:1px solid #d0d0d0;
 	font-size:14px;
 	box-sizing:border-box;
-	width:auto;
+	width:70px;
 	height:40px;
 	cursor:pointer;
 	padding:0 30px 0 10px;

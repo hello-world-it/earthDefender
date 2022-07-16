@@ -69,9 +69,9 @@
             <nav class="gnb">  
                 <ul>
                     <li><a href="/search.do">주변쓰레기통찾기</a></li>
-                    <li><a href="#">지구방위대활동사진</a></li>
+                    <li><a href="/photo.do">지구방위대활동사진</a></li>
                     <li><a href="/notice/selectList.do">지구방위대소식</a></li>
-                    <li><a href="#">자주묻는질문</a></li>
+                    <li><a href="/faq.do">자주묻는질문</a></li>
                 </ul>
             </nav>
             </div>
@@ -95,12 +95,8 @@
             <div><button class="pause"><img src="/images/index/pause_circle.png" alt="정지"></button></div>
         </div>
     </section>
-
-    <footer>
-        <hr>
-        <span class="copyright">Copyright(c) 2022 EARTH DEFENDER. All rights reserved.</span>
-        <span class="conection"><img src="/images/index/GitHub-Mark-32px.png" alt="git허브연결"> <img src="/images/index/notion-logo-no-background.png" alt="노션연결" style="width: 32px"></span>
-    </footer>
+    
+    
     
     
     <%-- 로그인 레이어 --%>
@@ -108,8 +104,8 @@
 	<!-- 로그인 -->
 	<div class="layer-popup layer-login" style="display: none;">
 		<header class="layer-header">
-			<span class="logo">
-				<span class="img-logo">한국폴리텍대학 대전캠퍼스 스마트소프트웨어학과</span>
+			<span class="logo_login">
+				<span class="img-logo">earth defender 지구방위대</span>
 			</span>
 			<button type="button" class="layer-close"><span>팝업 닫기</span></button>
 		</header>
@@ -131,13 +127,10 @@
 		</div>	
 	</div>
 
-
+	<footer></footer>
+    
+    
     <script>
-    jQuery(function($){
-       $(".menu-toggle-btn").click(function(){
-           $(".gnb").stop().slideToggle("fast");
-       });
-    });
 
 /*    $('.bx_slider').bxSlider({
         slideWidth: 1000,

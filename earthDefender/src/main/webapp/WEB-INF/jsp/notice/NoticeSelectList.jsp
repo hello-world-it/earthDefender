@@ -197,6 +197,7 @@
 	</div>
 </div>
 
+
 <!-- <script> /* forward 시 액션에 맞는 프로세서가 정상적으로 종료 시 메세지(등록되었습니다. 삭제되었습니다 등)를 보내주는 역할 */
 <c:if test="${not empty message}">
 	alert("${message}");

@@ -98,13 +98,13 @@ public class EgovMainController {
 	}
 	
 	
-	//로그인팝업
+	//
 	@RequestMapping(value = "/index.do")
 	public String index(HttpServletRequest request, ModelMap model) throws Exception {
 		
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		model.addAttribute("USER_INFO", user);
 		
-		return "index"; // forward:/index.do /index index 모두X
+		return "Index"; //
 	}
 }

@@ -52,7 +52,9 @@ input[type=tel] {
     top: 50%;
     transform: translate(-50%,-50%);
     padding: 30px 25px;
-    background: #fff;
+    /* background: #fff; */
+    background:url(../images/common/logo_back.png) no-repeat;
+    background-size: cover;
     z-index: 100;
     box-sizing: border-box;
     max-height: 96vh;
@@ -107,18 +109,18 @@ input[type=tel] {
     padding: 60px 0;
 }
 
-.layer-login .layer-header .logo {
+.layer-login .layer-header .logo_login {
     display: block;
-    width: 157px;
+    width: 250px;
     margin: 0 auto;
     font-size: 18px;
     text-align: center;
 }
 
-.layer-login .layer-header .logo .img-logo {
+.layer-login .layer-header .logo_login .img-logo {
     display: block;
-    width: 171px;
-    height: 45px;
+    width: 250px;
+    height: 100px;
     background:url(../images/common/logo_footer.png) no-repeat;
     text-indent:-9999em;
 }
@@ -142,7 +144,7 @@ input[type=tel] {
 
 .layer-login .layer-body fieldset .btn-login {
     height: 80px;
-    background: #10b0bf;
+    background: #c0c33e;
     color: #fff;
     font-weight: bold;
     width: 100%;

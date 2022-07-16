@@ -105,6 +105,7 @@
 	</div>
 </div>
 
+
 <script>
 $(document).ready(function(){
 	//게시글 삭제
