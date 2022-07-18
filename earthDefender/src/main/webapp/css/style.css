@@ -131,7 +131,7 @@ input, select {
 }
 #header hr { max-width: 1454px; }
 #header .logo { float: left; padding-top: 82px; display: inline-block; } /* .logo가 어디 있는지 작업자가 알 수 있다 */
-#header .gnb { padding: 50px 0; }
+#header .gnb { padding: 50px 0 40px 0; }
 #header .login_logout { padding-top: 40px; font-size: 0.9em; color: #555; font-weight: normal; letter-spacing: 0; margin: 0; }
 #header .gnb li { display: inline-block; color: #777; }
 #header .gnb li a { text-decoration: none; display: block; color: #777;  } /* a링크를 블럭으로 잡아서 글씨 근처에 마우스 오버 가능  */

@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<header id="header" style="padding-bottom: 20px;">
+<header id="header">
 	<h1 class="logo">
 		<a href="/index.do"><img src="/images/index/logo.png" alt="EARTH DEFENDER 로고"></a>
 	</h1>
@@ -45,6 +45,8 @@
 			</nav>
 		</div>
 	</div>
+	<hr style="width: 100%;">
+	<br>
 
 	<div class="menu-toggle-btn">
 		<img src="/images/index/menu_bar.png" alt="menu_bar">
@@ -86,7 +88,7 @@
 
 </header>
 
-<hr style="width: 100%; max-width:1200px;">
+
 	
 <script>
 <c:if test="${not empty message}">

@@ -37,16 +37,37 @@
 
 	<div class="sub_title"><h2>주변쓰레기통찾기</h2></div>
 
-	<div id="contents" >
-		<div id="map" style="width:800px; height:500px;"></div>
+	<div id="contents">
+		<div >
+			<table style="margin-left:auto; margin-right:auto; margin-bottom:30px; width: 900px;">
+				<tr>
+					<th style="background:none; text-align:left; padding-bottom:15px; color:#296c82;">쓰레기통등록</th>
+					<th style="background:none; text-align:left; padding-bottom:15px; color:#296c82;">쓰레기통찾기</th>
+				</tr>
+				<tr>
+					<td rowspan="2" style="padding-bottom:5px;">쓰레기통 등록 기능 작업 중</td>
+					<td style="padding-bottom:5px;"><input type="text" placeholder="읍/면/동 주소를 입력해주세요." style=" width:443px; border:2px solid gray"></td>
+				</tr>
+				<tr>
+					<td><select style="width: 140px"><option>광역시도 선택</option></select> &nbsp; <select style="width: 140px"><option>시/군/구 선택</option></select> &nbsp; <select style="width: 140px"><option>읍/면/동 선택</option></select></td>
+				</tr>
+			</table>
+		</div>
+		<div id="map" style="width:800px; height:500px; margin: auto;"></div>
 	</div>
 	
 	<p id="data"></p>
 	
 </div>
 
+<br>
+<footer>
+	<hr>
+	<span class="copyright">Copyright(c) 2022 EARTH DEFENDER. All rights reserved.</span>
+	<span class="conection"><a href="https://github.com/hello-world-it" target="_blank;"><img src="/images/index/GitHub-Mark-32px.png" alt="git허브바로가기"></a> &nbsp; <a href="https://hello-world-it.notion.site" target="_blank"><img src="/images/index/notion-logo-no-background.png" alt="노션바로가기" style="width: 32px"></a></span>
+</footer>
     
-<script>
+<!-- <script>
 	var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 	var options = { //지도를 생성할 때 필요한 기본 옵션
 		center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
@@ -61,34 +82,10 @@
 	fetch(url)
 		.then((res) => res.json())
 		.then((myJson) => { document.getElementById("data").innerText = JSON.stringify(myJson, null, 1); });
+</script> -->
 
-</script>
-
-</body>
-</html>
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="map" style="width: 100%; height: 100vh"></div>
-    <script
-      type="text/javascript"
-      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey={해당apikey}&libraries=clusterer"
-    ></script>
-    
     <script>
-      const url =
-        "https://api.odcloud.kr/api/15077586/v1/centers?page=1&perPage=284&serviceKey={해당serviceKey}";
+	const url = "https://api.odcloud.kr/api/15087731/v1/uddi:9b511773-7947-46ec-9639-ab72cdc0f3db?page=1&perPage=10&serviceKey=dS8CvjgAvtcYaABLi4tcYr3YhyEWzV4LjrfniBtLZlDU0d9VLuDwa6JOeqbWvq7%2F5Xr1NwE%2B1AJheoowGMN6VQ%3D%3D";
 
       // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
       function makeOverListener(map, marker, infowindow) {
@@ -106,7 +103,7 @@
 
       var mapContainer = document.getElementById("map"), // 지도를 표시할 div
         mapOption = {
-          center: new kakao.maps.LatLng(37.60504, 127.05591), // 지도의 중심좌표
+          center: new kakao.maps.LatLng(36.3508586, 127.454463), // 지도의 중심좌표
           level: 3, // 지도의 확대 레벨
         };
 
@@ -118,6 +115,7 @@
         minLevel: 5, // 클러스터 할 최소 지도 레벨
       });
 
+      
       fetch(url)
         .then((res) => res.json())
         .then((myJson) => {
@@ -145,7 +143,6 @@
           clusterer.addMarkers(markers);
         });
     </script>
-  </body>
+    
+</body>
 </html>
-[출처] 공공데이터를 통한 api 활용 (예방접종센터 위치정보)|작성자 공들이
-

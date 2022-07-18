@@ -127,24 +127,14 @@
 		</div>	
 	</div>
 
-	<footer></footer>
+	<footer>
+        <hr>
+        <span class="copyright">Copyright(c) 2022 EARTH DEFENDER. All rights reserved.</span>
+		<span class="conection"><a href="https://github.com/hello-world-it" target="_blank;"><img src="/images/index/GitHub-Mark-32px.png" alt="git허브바로가기"></a> &nbsp; <a href="https://hello-world-it.notion.site" target="_blank"><img src="/images/index/notion-logo-no-background.png" alt="노션바로가기" style="width: 32px"></a></span>
+    </footer>
     
     
-    <script>
-
-/*    $('.bx_slider').bxSlider({
-        slideWidth: 1000,
-        minSlides: 4,
-        maxSlides: 4,
-        moveSlides: 1,
-        slideMargin: 60,
-        auto: true,
-        autoControls: true,
-        autoHover: true,
-        adaptiveHeight: true,
-        pager: false
-      }); */
-
+<script>
     $(document).ready(function () {
         var slide1 = $('.slider').bxSlider({
             auto: true,
@@ -161,38 +151,39 @@
       
       
       
-////////// 로그인 //////////
-$(document).ready(function(){
-	//로그인
-	$(".login").click(function(){
-		$(".dim, .layer-login").fadeIn();
-		return false;
+	////////// 로그인 //////////
+	$(document).ready(function(){
+		//로그인
+		$(".login").click(function(){
+			$(".dim, .layer-login").fadeIn();
+			return false;
+		});
+		
+		//레이어닫기
+		$(".layer-close").click(function(){
+			$(".dim, .layer-login").fadeOut();
+			return false;
+		});
 	});
-	
-	//레이어닫기
-	$(".layer-close").click(function(){
-		$(".dim, .layer-login").fadeOut();
-		return false;
-	});
-});
 
-function vali() {
-	if(!$("#loginId").val()) {
-		alert("아이디를 입력해주세요.");
-		$("#loginId").focus();
-		return false;
+	function vali() {
+		if(!$("#loginId").val()) {
+			alert("아이디를 입력해주세요.");
+			$("#loginId").focus();
+			return false;
+		}
+		
+		if(!$("#loginPw").val()) {
+			alert("비밀번호를 입력해주세요.");
+			$("loginPw").focus();
+			return false;
+		}
 	}
 	
-	if(!$("#loginPw").val()) {
-		alert("비밀번호를 입력해주세요.");
-		$("loginPw").focus();
-		return false;
-	}
-}
+	<c:if test="${not empty loginMessage}">
+		alert("${loginMessage}");
+	</c:if>
+</script>
 
-<c:if test="${not empty loginMessage}">
-	alert("${loginMessage}");
-</c:if>
-    </script>
 </body>
 </html>

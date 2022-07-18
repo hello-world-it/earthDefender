@@ -232,6 +232,12 @@ $(function(){
 </div>
 </div>
 
+<footer>
+	<hr>
+	<span class="copyright">Copyright(c) 2022 EARTH DEFENDER. All rights reserved.</span>
+	<span class="conection"><a href="https://github.com/hello-world-it" target="_blank;"><img src="/images/index/GitHub-Mark-32px.png" alt="git허브바로가기"></a> &nbsp; <a href="https://hello-world-it.notion.site" target="_blank"><img src="/images/index/notion-logo-no-background.png" alt="노션바로가기" style="width: 32px"></a></span>
+</footer>
+
 
 <script>
 //html에선 위에서 아래로  왼에서 오로 읽으며 만들어짐. 스크립트가 위에 있으면 코드가 만들어지기 전에 스크립트가 이미 실행되서 실제 버튼태그(등록/삭제)을 아래에 구현했으면 버튼 실행이 안돼

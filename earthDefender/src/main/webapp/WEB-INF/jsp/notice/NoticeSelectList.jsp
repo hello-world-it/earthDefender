@@ -197,6 +197,12 @@
 	</div>
 </div>
 
+<footer>
+	<hr>
+	<span class="copyright">Copyright(c) 2022 EARTH DEFENDER. All rights reserved.</span>
+	<span class="conection"><a href="https://github.com/hello-world-it" target="_blank;"><img src="/images/index/GitHub-Mark-32px.png" alt="git허브바로가기"></a> &nbsp; <a href="https://hello-world-it.notion.site" target="_blank"><img src="/images/index/notion-logo-no-background.png" alt="노션바로가기" style="width: 32px"></a></span>
+</footer>
+
 
 <!-- <script> /* forward 시 액션에 맞는 프로세서가 정상적으로 종료 시 메세지(등록되었습니다. 삭제되었습니다 등)를 보내주는 역할 */
 <c:if test="${not empty message}">

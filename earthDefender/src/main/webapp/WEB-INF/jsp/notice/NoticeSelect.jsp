@@ -105,6 +105,12 @@
 	</div>
 </div>
 
+<footer>
+	<hr>
+	<span class="copyright">Copyright(c) 2022 EARTH DEFENDER. All rights reserved.</span>
+	<span class="conection"><a href="https://github.com/hello-world-it" target="_blank;"><img src="/images/index/GitHub-Mark-32px.png" alt="git허브바로가기"></a> &nbsp; <a href="https://hello-world-it.notion.site" target="_blank"><img src="/images/index/notion-logo-no-background.png" alt="노션바로가기" style="width: 32px"></a></span>
+</footer>
+
 
 <script>
 $(document).ready(function(){

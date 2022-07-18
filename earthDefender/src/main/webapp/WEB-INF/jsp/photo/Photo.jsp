@@ -33,10 +33,15 @@
 	<div class="sub_title"><h2>지구방위대활동사진</h2></div>
 
 	<div id="contents" >이미지게시판</div>
+	<br><br><br><br><br><br><br><br>
 	
 </div>
 
-
+<footer>
+	<hr>
+	<span class="copyright">Copyright(c) 2022 EARTH DEFENDER. All rights reserved.</span>
+	<span class="conection"><a href="https://github.com/hello-world-it" target="_blank;"><img src="/images/index/GitHub-Mark-32px.png" alt="git허브바로가기"></a> &nbsp; <a href="https://hello-world-it.notion.site" target="_blank"><img src="/images/index/notion-logo-no-background.png" alt="노션바로가기" style="width: 32px"></a></span>
+</footer>
     
 
 </body>
